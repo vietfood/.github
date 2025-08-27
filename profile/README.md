@@ -1,7 +1,8 @@
 welcome to vietfood 🍜
 
-- we're a tiny organization created by vietnamese students
-- we want to build small but meaningful projects for our community
+- we're a tiny group of vietnamese students
+- inspired by [tinygrad](https://github.com/tinygrad/tinygrad), we build small but meaningful projects for our community
+- we learn by doing, and share what we learn
 
 some of our projects:
 - [cs4all-vn](https://github.com/vietfood/cs4all-vn): a tiny wiki about computer science for vietnamese students and practitioners. we're actively writing the best articles we can. right now we have notes (and some solved exercises) for [prml](https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) (pattern recognition and machine learning).
