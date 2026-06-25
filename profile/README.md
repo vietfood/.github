@@ -5,8 +5,8 @@ we cook code like street food — fast, cheap, sometimes messy, but tasty
 - learn by breaking stuff, fix it later (maybe)
 
 what we care about:  
-- low-level and high performance programming (gpu). efficient LLM (inference and training)
-- reinforcement learning
+- low-level and high performance programming (gpu).
+- efficient LLM (inference and training)
 
 our philosophy:
 - teaching through code: we prefer tiny, readable implementations over giant frameworks
