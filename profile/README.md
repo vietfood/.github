@@ -17,3 +17,4 @@ some of our notable projects:
 - [banhxeo](https://github.com/vietfood/banhxeo): an even more tiny Tensor framework based on [tinygrad](https://github.com/tinygrad/tinygrad).
 - [comtam](https://github.com/vietfood/comtam): a tiny eager-mode Tensor framework for Apple device based on [magnetron](https://github.com/MarioSieg/magnetron).
 - [cuda-lab](https://github.com/vietfood/cuda-lab): a small CUDA kernel learning environment based on [learn-cuda](https://github.com/gau-nernst/learn-cuda) by [gau-nerst](https://github.com/gau-nernst).
+- [metal-lab](https://github.com/vietfood/meta-lab): same as cuda-lab but for Metal framework of Apple device.
