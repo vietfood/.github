@@ -16,4 +16,4 @@ our philosophy:
 some of our notable projects:
 - [banhxeo](https://github.com/vietfood/banhxeo): an even more tiny Tensor framework based on [tinygrad](https://github.com/tinygrad/tinygrad).
 - [comtam](https://github.com/vietfood/banhxeo): a tiny eager-mode Tensor framework for Apple device based on [magnetron](https://github.com/MarioSieg/magnetron).
-- [cs4all-vn](https://github.com/vietfood/cs4all-vn): a tiny wiki about computer science for vietnamese students and practitioners. we're actively writing the best articles we can. right now we have notes (and some solved exercises) for [PRML](https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) (Pattern Recognition and Machine Learning book by Bishop).
+- [cuda-lab](https://github.com/vietfood/banhxeo): a small CUDA kernel learning environment based on [learn-cuda](https://github.com/gau-nernst/learn-cuda) by [gau-nerst](https://github.com/gau-nernst).
