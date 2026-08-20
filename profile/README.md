@@ -1,59 +1,36 @@
 # vietfood 🍜
 
-**small software for people who want to understand how things work.**
+**Small open-source software for understanding how modern AI systems work.**
 
-vietfood is a tiny open-source engineering lab for building things that are usually hidden behind large frameworks. complicated systems become much less mysterious when you build a small one yourself.
+Vietfood is an independent open-source engineering organization focused on AI systems, developer tools, GPU computing, inference, and technical education.
 
-we work around ML systems, developer tools, inference, compilers, GPU programming, and learning material. the projects are intentionally small enough to read, modify, break, and rebuild. some are serious engineering exercises, some are experiments, and some are just things that sounded fun after work.
+We build small, understandable implementations of systems that are usually hidden behind much larger frameworks. The goal is to make the underlying ideas easier to study, modify, and experiment with — from tensor runtimes and model execution to coding agents and learning resources.
 
-## what we're cooking
+Our projects are primarily experimental and educational. Some are written manually as engineering exercises, while others make extensive use of AI-assisted development. In both cases, we care about understanding the system, documenting the design, and keeping the implementation accessible.
 
-🍜 [pho-code](https://github.com/vietfood/pho-code): **a coding agent in a window you own.**
+## Projects
 
-a small desktop coding agent built around [Pi](https://github.com/earendil-works/pi). `pho-code` builds the product around it — the UI, tools, skills, prompts, permissions, and workflow.
+| Project                                                 | What it is                                       | Details                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 🍜 **[Pho Code](https://github.com/vietfood/pho-code)** | A coding agent in a window you own               | An open-source desktop coding agent built around [Pi](https://github.com/earendil-works/pi). Pi provides the agent runtime while Pho Code builds the surrounding product: conversations, tools, skills, prompts, permissions, local search, web access, and the desktop interface. The project explores how customizable a coding-agent environment can become when the entire host application is open and designed to be modified. |
+| 🍚 **[comtam](https://github.com/vietfood/comtam)**     | A tiny deep-learning framework for Apple Silicon | An eager-mode tensor framework written in C++20 and Metal, designed as both a working framework and a self-study project. It explores tensor storage, views and strides, broadcasting, dispatch, GPU kernels, reductions, matrix multiplication, automatic differentiation, and eventually higher-level neural-network components. Correctness, readability, and explicit design come before completeness.                           |
+| 🥞 **[banhxeo](https://github.com/vietfood/banhxeo)**   | A small ML inference engine                      | Originally a lazy tensor framework exploring computation graphs and Triton code generation, now evolving into a dedicated inference engine. The project focuses on graph execution, compilation, kernel generation, scheduling, memory planning, model loading, and efficient execution — the machinery between a trained model and the hardware that runs it.                                                                       |
+| 🥖 **[bami-hub](https://github.com/vietfood/bami-hub)** | Open learning material for AI, ML, and systems   | A learning hub for original courses and notes together with carefully adapted or translated open-source educational material. The goal is to connect theory with implementation so that ideas can eventually be inspected in code rather than stopping at the API or tutorial level.                                                                                                                                                 |
 
-this one is built heavily with AI. the interesting experiment is the product itself: how far can you push a coding-agent workspace when the whole thing is source you can change?
+## Philosophy
 
-fork it, change the prompt, replace the tools, rebuild the UI. make it yours.
+| Principle                                  | What we mean                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🔨 **Build to understand**                 | Large production systems accumulate abstractions, compatibility requirements, optimizations, and historical constraints. We prefer starting with implementations small enough to understand end to end, then adding complexity when the problem actually requires it.                                                        |
+| 🔍 **Keep the machinery visible**          | Abstractions are useful, but they should not make the underlying system impossible to inspect. We value explicit designs, readable implementations, and code that can be modified without first understanding millions of lines around it.                                                                                   |
+| 🧪 **Learn in public**                     | These repositories are also records of the learning process. Designs change, implementations are rewritten, experiments fail, and projects sometimes move in entirely different directions as our understanding improves.                                                                                                    |
+| 🤖 **Use AI openly**                       | AI is used differently across Vietfood. Some projects are intentionally implemented by hand, with AI acting as a teacher, reviewer, and debugger. Others use AI heavily for implementation while the human focuses on architecture, testing, direction, and product design. We prefer being explicit about that distinction. |
+| 📖 **Source is part of the documentation** | Documentation and courses can explain an idea, but the implementation should eventually be understandable too. A project succeeds educationally when someone can read it, modify it, break it, and understand why it works.                                                                                                  |
 
-🍚 [comtam](https://github.com/vietfood/comtam): **a tiny deep-learning framework for Apple Silicon.**
+## About
 
-`comtam` is an eager-mode tensor framework in C++20 built to understand the machinery underneath frameworks like `PyTorch`: storage, tensors, views, strides, broadcasting, kernels, autograd, and eventually neural networks.
+Vietfood is named after Vietnamese food, and most projects follow the same convention.
 
-> an eager-mode tensor framework in 2026, bro you're outdated lol.
+We build these projects because understanding a system deeply enough to recreate a small version of it is one of the best ways we know to learn.
 
-the code is written by a human, with AI acting mostly as a teacher, reviewer, and debugger. the point is not to replace `PyTorch` or `MLX` (love them). the point is to understand enough of the stack that it stops looking like magic.
-
-🥞 [banhxeo](https://github.com/vietfood/banhxeo): **a tiny LLM inference engine in the making.**
-
-`banhxeo` started as another tiny tensor framework, focused more on lazy graphs, compilation, and Triton code generation. that eventually overlapped too much with `comtam`, so the project is moving lower in the stack.
-
-the new goal is a small inference engine for exploring graph execution, compilation, kernel generation, memory planning, scheduling, model loading, and the rest of the machinery required to actually run neural networks.
-
-🥖 [bami-hub](https://github.com/vietfood/bami-hub): **an open learning kitchen for ML, systems, and AI.**
-
-`bami-hub` is the learning side of `vietfood`. it contains original material together with translated or adapted open-source books, courses, notes, and other educational resources.
-
-ideally the learning material and the software meet somewhere in the middle: read the idea, inspect the implementation, break something, then build your own version.
-
-## philosophy
-
-### build to understand
-
-we like tiny implementations because you can hold them in your head.
-
-production systems need abstractions, compatibility layers, optimizations, and years of accumulated engineering decisions. those things are necessary, but they are terrible places to start learning. we would rather feel the problem first and introduce the abstraction after we understand why it needs to exist.
-
-### use AI, don't hide it
-
-different projects here use AI differently. sometimes the human writes and the AI teaches. sometimes the AI writes and the human directs. sometimes both produce terrible code and spend the next evening figuring out why. 
-
-> the interesting question is not who typed every line. it is whether the system is understood well enough to modify, debug, and own.
-
-### learn in public
-
-things here will fail, get rewritten, and occasionally turn into completely different projects. that's fine. a repository is allowed to show the path between "I wonder how this works" and "okay, now I actually understand it."
-
----
-
-**build things. break things. understand why.**
+**Build things. Break things. Understand why.**
